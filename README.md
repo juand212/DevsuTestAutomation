@@ -11,7 +11,7 @@ Git:
 
 ## E2E automation
 
-project developed with java and serenity bdd, is located inside the directory:
+project developed with java and serenity bdd, is located inside the directory "SwagLabsAutomation" where we can find the readme of the project with the execution instructions. we can access via terminal with the following command:
 
     cd SwagLabsAutomation
 
