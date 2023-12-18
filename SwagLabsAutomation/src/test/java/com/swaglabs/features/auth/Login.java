@@ -30,21 +30,21 @@ public class Login extends BaseConf {
 
     @BeforeEach
     public void navigate() {
-        devsuActor.attemptsTo(
+        actor.attemptsTo(
                 NavigateTo.loginPage());
     }
 
     @Test
-    @Tag("data")
+    @Tag("smoke")
     public void should_UserLoginSuccessfully_When_HeSendsValidCredentials() {
         user = getUserByUsername(ADMIN.getUserName());
 
-        devsuActor.describedAs("login with valid credentials");
-        devsuActor.attemptsTo(
+        actor.describedAs("login with valid credentials");
+        actor.attemptsTo(
                 LoginWith.username(user.getUsername())
                         .andPassword(user.getPassword())
         );
-        devsuActor.should(
+        actor.should(
                 seeThat(the(CART), isVisible())
         );
     }

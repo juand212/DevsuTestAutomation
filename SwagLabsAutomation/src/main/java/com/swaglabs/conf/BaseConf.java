@@ -14,7 +14,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 
 public class BaseConf {
 
-    protected Actor devsuActor;
+    protected Actor actor;
     private EnvironmentVariables environmentVariables;
 
     @Managed
@@ -24,13 +24,13 @@ public class BaseConf {
     public void setTheStage() {
         OnStage.setTheStage(new OnlineCast());
 
-        devsuActor = theActorCalled("Admin");
+        actor = theActorCalled("Admin");
 
-        devsuActor.can(BrowseTheWeb.with(browser));
+        actor.can(BrowseTheWeb.with(browser));
 
         browser.manage().window().maximize();
 
-        devsuActor.remember("baseUrl",
+        actor.remember("baseUrl",
                 EnvironmentSpecificConfiguration.from(environmentVariables)
                         .getProperty("webdriver.base.url"));
     }

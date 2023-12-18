@@ -1,0 +1,44 @@
+{
+  "purchases": [
+    {
+      "key": "with-two-products",
+      "firstName": "Juan",
+      "lastName": "Lopez",
+      "postalCode": "190002",
+      "products": [
+        {
+          "name": "Sauce Labs Bike Light",
+          "price": "$9.99"
+        },
+        {
+          "name": "Sauce Labs Bolt T-Shirt",
+          "price": "$15.99"
+        }
+      ],
+      "value": "$25.98",
+      "total": "$28.06"
+    },
+    {
+      "key": "with-three-products",
+      "firstName": "Pepito",
+      "lastName": "Peres",
+      "postalCode": "190001",
+      "products": [
+        {
+          "name": "Sauce Labs Bike Light",
+          "price": "$9.99"
+        },
+        {
+          "name": "Sauce Labs Bolt T-Shirt",
+          "price": "$15.99"
+        },
+        {
+          "name": "Sauce Labs Fleece Jacket",
+          "price": "$49.99"
+        }
+      ],
+      "value": "$75.97",
+      "total": "$82.05"
+    }
+  ]
+}
