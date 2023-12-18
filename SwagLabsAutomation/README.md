@@ -1,13 +1,6 @@
-# DevsuTest
+# Swag Labs Automation
 
-Test project for E2E automation and API Devsu, 
-in this project we will use java 11 and SerenityBDD for the automation of e2e
-
-## Get the code
-
-Git:
-
-    git clone https://github.com/juand212/DevsuTest.git
+Test project for E2E automation, in this project we will use java 11, gradle and SerenityBDD for the automation of e2e
 
 
 ## Use Gradle
