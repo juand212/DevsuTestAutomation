@@ -1,0 +1,86 @@
+group 'com.swaglabs'
+version '1.0-SNAPSHOT'
+
+defaultTasks 'clean','test','aggregate'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "net.serenity-bdd:serenity-gradle-plugin:4.0.12"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.serenity-gradle-plugin'
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+ext {
+    slf4jVersion = '1.7.7'
+    serenityCoreVersion = '4.0.12'
+    junitPVersion = '1.10.0'
+    junit5Version = '5.10.0'
+    assertJVersion = '3.23.1'
+    logbackVersion = '1.2.11'
+    jsonPath = '5.0.1'
+    lombokVersion = '1.18.24'
+    javaFakerVersion = '1.0.2'
+
+}
+
+dependencies {
+    implementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-junit:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-junit5:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-screenplay-rest:${serenityCoreVersion}",
+            "org.junit.platform:junit-platform-launcher:${junitPVersion}",
+            "org.junit.jupiter:junit-jupiter-engine:${junit5Version}",
+            "org.junit.jupiter:junit-jupiter-api:${junit5Version}",
+            "org.junit.vintage:junit-vintage-engine:${junit5Version}",
+            "org.assertj:assertj-core:${assertJVersion}",
+            "io.rest-assured:json-path:${jsonPath}",
+            "com.github.javafaker:javafaker:${javaFakerVersion}",
+            "ch.qos.logback:logback-classic:${logbackVersion}"
+
+    annotationProcessor "org.projectlombok:lombok"
+
+    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+
+    testCompileOnly "org.projectlombok:lombok:${lombokVersion}"
+    testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+}
+
+clean {
+    delete "target"
+}
+
+test {
+    useJUnitPlatform()
+    testLogging.showStandardStreams = true
+    systemProperties System.getProperties()
+}
+
+serenity {
+    reports = ["single-page-html"]
+    testRoot="com.swaglabs.features"
+}
+
+gradle.startParameter.continueOnFailure = true
+
+test.finalizedBy(aggregate)
