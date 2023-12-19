@@ -6,7 +6,7 @@ Test project for E2E and API Automation
 
 Git:
 
-    git clone https://github.com/juand212/DevsuTest.git
+    git clone https://github.com/juand212/DevsuTestAutomation
 
 
 ## E2E automation
