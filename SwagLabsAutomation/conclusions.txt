@@ -1,0 +1,12 @@
+Conclusiones:
+
+El proyecto actual para pruebas E2E de interfaz gráfica de usuario, esta realizado con el framework de SerenityBDD, gradle y java 11,
+bajo el patrón de diseño screenplay usando junit5. En este proyecto se encontrarán dos escenarios de negocio críticos para la aplicación Swag Labs,
+por un parte el inicio de sesión y la compra de dos o tres productos.
+
+En este proyecto encontraremos una estructura básica del patron screenplay, incluyendo archivos JSON donde persistirá los datos de pruebas,
+clases fábrica que devolverán objetos de tipo POJO que serán las abstracciones de nuestra información de pruebas, así como el uso de lombok
+para el manejo del encapsulamiento, apesar de ser un proyecto sencillo, se puede observar buenas prácticas de desarrollo y automatización de pruebas,
+incluyendo localizadores dinámicos con contexto, haciendo buen uso de xpath y además usando los ids que la página provee, haciendolo un poco mas trabajable.
+El código de automatización es autodocumentado, ya que el DSL es claro y expresa la intención de cada clase y método, además de hacer reuso de la tarea
+que permite validar los productos seleccionados dentro del carrito de compras y en al confirmación de la compra, asi como la configuración de cada test.
