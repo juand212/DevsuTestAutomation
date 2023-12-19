@@ -1,0 +1,19 @@
+debug.log
+.factorypath
+build
+.gradle
+pom.xml.next
+release.properties
+buildNumber.properties
+.mvn/timing.properties
+.idea
+*.iml
+# Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
+!/.gradle/wrapper/gradle-wrapper.jar
+/.classpath
+/.project
+bin/
+/.settings/
+*.log
+/out/
+/.vscode/

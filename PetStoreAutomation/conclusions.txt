@@ -1,0 +1,10 @@
+Conclusiones:
+
+El proyecto actual para pruebas API, esta realizado con el framework de SerenityRest, gradle y java 11, bajo el patrón de diseño screenplay usando junit5.
+En este proyecto se encontrarán los escenarios base para asegurar el funcionamiento del servicio de usuarios de la aplicación Pet Store.
+
+En este proyecto encontraremos una estructura básica del patron screenplay, pero se asegura que cada escenario sea independiente y no tenga relación con otro,
+ya que no debe existir dependencias entre escenarios y datos de pruebas, se incluyeron tareas donde se evidencias los métodos Http del servicio, indicando
+las acciones propias de cara tarea, como crear, editar, obtener y borrar, esto hace que el framework sea mas entendible para quien interactúe con el mismo.
+Se trata de llevar un proyecto orientado a objetos para mantener una abstracción y estructura del framework, aunque las apis no proveen mucha información
+se buscó validar la información de respuesta para asegurar que la persistencia no estuviera afectada.
