@@ -25,13 +25,13 @@ project developed with java and serenity rest, is located inside the directory "
 
 ## Demo Blaze - API automation Cypress
 
-project developed with cypress, is located inside the directory "DemoBlazeAutomation" where we can find the readme of the project with the execution instructions. we can access via terminal with the following command:
+project developed with cypress, is located inside the directory "DemoBlazeApiAutomation" where we can find the readme of the project with the execution instructions. we can access via terminal with the following command:
 
     cd DemoBlazeAutomation
 
 ## Comments
 
-It was decided to do the APIS automation projects in two different tools, in order to demonstrate the differences and robustness of these tools.
+It was decided to do the APIS automation projects in two different tools, in order to demonstrate the differences and robustness of these tools and the time was worth it. 
 
     :D
 

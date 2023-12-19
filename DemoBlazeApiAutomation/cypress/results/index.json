@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-12-19T23:15:31.239Z",
+    "end": "2023-12-19T23:15:32.310Z",
+    "duration": 1071,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "52530fc9-9afc-4d6a-80ea-14f475f4ba2a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\loginTestApi.cy.js",
+      "file": "cypress\\e2e\\loginTestApi.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0d72d610-648f-4329-8765-45cb3b9ec66b",
+          "title": "Login tests DemoBlaze",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login with valid credentials",
+              "fullTitle": "Login tests DemoBlaze login with valid credentials",
+              "timedOut": null,
+              "duration": 528,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'POST',\n  url: api.concat(_EndPoints.default.paths.login),\n  headers: {\n    'Content-Type': format\n  },\n  body: this.jsonBody\n}).then(response => {\n  expect(response.status).to.equal(200);\n  expect(response.body).to.contain(\"Auth_token:\");\n});",
+              "err": {},
+              "uuid": "b9a6771a-ec80-4fbb-960e-7b4da1154907",
+              "parentUUID": "0d72d610-648f-4329-8765-45cb3b9ec66b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "login with non-existent user",
+              "fullTitle": "Login tests DemoBlaze login with non-existent user",
+              "timedOut": null,
+              "duration": 232,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'POST',\n  url: api.concat(_EndPoints.default.paths.login),\n  headers: {\n    'Content-Type': format\n  },\n  body: {\n    \"username\": \"fake12315165\",\n    \"password\": \"YWRtaW4=\"\n  }\n}).then(response => {\n  expect(response.status).to.equal(200);\n  expect(response.body.errorMessage).to.equal(\"User does not exist.\");\n});",
+              "err": {},
+              "uuid": "97984ec4-6994-46c1-9a3c-cd214f46648e",
+              "parentUUID": "0d72d610-648f-4329-8765-45cb3b9ec66b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "login with password invalid",
+              "fullTitle": "Login tests DemoBlaze login with password invalid",
+              "timedOut": null,
+              "duration": 209,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'POST',\n  url: api.concat(_EndPoints.default.paths.login),\n  headers: {\n    'Content-Type': format\n  },\n  body: {\n    \"username\": \"admin\",\n    \"password\": \"YWRtaW4=23423\"\n  }\n}).then(response => {\n  expect(response.status).to.equal(200);\n  expect(response.body.errorMessage).to.equal(\"Wrong password.\");\n});",
+              "err": {},
+              "uuid": "eca13713-1aee-479f-92e6-3c29974d7ece",
+              "parentUUID": "0d72d610-648f-4329-8765-45cb3b9ec66b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b9a6771a-ec80-4fbb-960e-7b4da1154907",
+            "97984ec4-6994-46c1-9a3c-cd214f46648e",
+            "eca13713-1aee-479f-92e6-3c29974d7ece"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 969,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "index",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportFilename": "index",
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
