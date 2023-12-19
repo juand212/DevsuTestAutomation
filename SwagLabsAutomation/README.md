@@ -5,13 +5,21 @@ Test project for E2E automation, in this project we will use java 11, gradle and
 
 ## Use Gradle
 
-Open a command window and run:
+Open a terminal and run:
 
     ./gradlew test
 
 ## Running tests by tags
 
-    ./gradlew clean test -Dtags='login'
+    ./gradlew tags -DincludeTags='login'
+    ./gradlew tags -DincludeTags='purchase'
+    ./gradlew tags -DincludeTags='smoke'
+
+## include execution report
+
+Open a terminal and run:
+
+    ./gradlew aggregate
 
 ## Viewing the reports
 

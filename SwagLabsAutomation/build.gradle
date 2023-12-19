@@ -76,6 +76,14 @@ test {
     systemProperties System.getProperties()
 }
 
+task tags(type: Test) {
+    testLogging.showStandardStreams = true
+    useJUnitPlatform {
+        includeTags(String.valueOf(System.getProperty("includeTags")))
+    }
+    systemProperties System.getProperties()
+}
+
 serenity {
     reports = ["single-page-html"]
     testRoot="com.swaglabs.features"
