@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="com.petstore.features.DeleteUser" skipped="0" tests="1" time="1.68" timestamp="2023-12-19 12:07:45"><testcase classname="com.petstore.features.DeleteUser" name="Should delete a user when user is sent"/></testsuite>

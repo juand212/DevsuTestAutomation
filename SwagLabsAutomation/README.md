@@ -7,7 +7,10 @@ Test project for E2E automation, in this project we will use java 11, gradle and
 
 Open a terminal and run:
 
-    ./gradlew test
+    ./gradlew test  
+    gradlew test
+
+you could use gradlew or ./gradlew.
 
 ## Running tests by tags
 

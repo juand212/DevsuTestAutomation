@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="com.petstore.features.CreateUser" skipped="0" tests="1" time="28.01" timestamp="2023-12-19 12:07:14"><testcase classname="com.petstore.features.CreateUser" name="Should user be created when required data is sends"/></testsuite>
